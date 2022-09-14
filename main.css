@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #252525;
+}
+
+#helpObject {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.settings {
+  user-select: none;
+  margin: 10px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1919;
+  text-align: center;
+  box-shadow: 0px 0px 20px black;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#set {
+  order: 1;
+  flex: 2;
+}
+
+#moves {
+  order: 3;
+  flex: 2;
+}
+
+#board {
+  flex-wrap: wrap;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 517px;
+  order: 2;
+  flex: 1;
+}
+
+#field {
+  float: left;
+  width: 480px;
+  height: 480px;
+  border: 1px solid #000;
+}
+
+#numbers {
+  user-select: none;
+  height: 458px;
+  float: left;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 37px;
+  padding-top: 22px;
+  margin-left: 10px;
+  color: #f2d26f;
+  font-family: 'Poppins', sans-serif;
+}
+
+#letters {
+  text-align: center;
+  width: 100%;
+  user-select: none;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  letter-spacing: 51px;
+  padding-left: 15px;
+  color: #f2d26f;
+  font-family: 'Poppins', sans-serif;
+}
+
+#winner {
+  opacity: 0%;
+  visibility: hidden;
+  text-align: center;
+  border-radius: 10%;
+  background: #79cdf7;
+  width: 150px;
+  height: 200px;
+  margin-top: 140px;
+  position: absolute;
+  box-shadow: 0px 0px 20px black;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.5s ease;
+}
+
+#moves #mainTxt {
+  margin-bottom: 10px;
+}
+
+#chooseColor {
+  height: 60px;
+  width: 90%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  box-shadow: inset 0px 0px 5px black;
+  border-radius: 20px;
+}
+
+#movesBlock {
+  overflow-y: scroll;
+  max-height: 400px;
+  height: auto;
+  width: 90%;
+  margin-top: 0px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 10px;
+  box-shadow: inset 0px 0px 5px black;
+  border-radius: 20px;
+  line-height: 18px;
+}
+
+#movesBlock::-webkit-scrollbar {
+  width: 0px;
+}
+
+.smallBlock {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50px;
+  height: 50px;
+  background: green;
+  border-radius: 5px;
+}
+
+.smallBlock:not(:last-child) {
+  margin-right: 10px;
+}
+
+.smallBlock:hover {
+  cursor: grab;
+}
+
+#firstColor {
+  background: #f2d26f;
+  border: 2px solid white;
+}
+#secondColor {
+  background: #f757d2;
+}
+#thirdColor {
+  background: #6efa93;
+}
+
+.textOnRight {
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#mainTxt {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#winner p {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  line-height: 18px;
+  user-select: none;
+}
+
+img {
+  width: 60px;
+}
+
+p:hover {
+  cursor: default;
+}
+
+.chessBlock {
+  display: block;
+  width: 60px;
+  height: 60px;
+  float: left;
+  background: #f2d26f;
+}
+
+.backBlack {
+  background: #63461a;
+}
+
+.horse.white {
+  background-image: url('images/horse.png');
+  background-size: 100%;
+}
+
+.horse.black {
+  background-image: url('images/horseBlack.png');
+  background-size: 100%;
+}
+
+.pink {
+  background: pink !important;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+.rook.white {
+  background-image: url('images/rook.png');
+  background-size: 90%;
+}
+
+.rook.black {
+  background-image: url('images/rookBlack.png');
+  background-size: 90%;
+}
+
+.bishop.white {
+  background-image: url('images/bishop.png');
+  background-size: 85%;
+}
+
+.bishop.black {
+  background-image: url('images/bishopBlack.png');
+  background-size: 85%;
+}
+
+.queen.white {
+  background-image: url('images/queen.png');
+  background-size: 100%;
+}
+
+.queen.black {
+  background-image: url('images/queenBlack.png');
+  background-size: 100%;
+}
+
+.pawn.white {
+  background-image: url('images/pawn.png');
+  background-size: 100%;
+}
+
+.pawn.black {
+  background-image: url('images/pawnBlack.png');
+  background-size: 100%;
+}
+
+.king.white {
+  background-image: url('images/king.png');
+  background-size: 85%;
+}
+
+.king.black {
+  background-image: url('images/kingBlack.png');
+  background-size: 85%;
+}
+
+.selected {
+  box-shadow: inset 0px 0px 5px blue;
+}
+
+.element {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checked {
+  box-shadow: inset 0px 0px 10px red;
+}
+
+.chessBlock.blue {
+  background-color: #4f46fa !important;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
